@@ -1,9 +1,9 @@
 # Docker Image for Seafile 5 & 6 Pro Edition
 
-[![Docker Automated buil](https://img.shields.io/docker/automated/xama/docker-seafile-pro.svg)]()
-[![Docker Stars](https://img.shields.io/docker/stars/xama/docker-seafile-pro.svg)]()
-[![Docker Pulls](https://img.shields.io/docker/pulls/xama/docker-seafile-pro.svg)]()
-[![Docker Layers](https://images.microbadger.com/badges/image/xama/docker-seafile-pro.svg)]()
+[![Docker Automated buil](https://img.shields.io/docker/automated/whhxp/docker-seafile-pro.svg)]()
+[![Docker Stars](https://img.shields.io/docker/stars/whhxp/docker-seafile-pro.svg)]()
+[![Docker Pulls](https://img.shields.io/docker/pulls/whhxp/docker-seafile-pro.svg)]()
+[![Docker Layers](https://images.microbadger.com/badges/image/whhxp/docker-seafile-pro.svg)]()
 
 ## Introduction
 
@@ -22,7 +22,7 @@ You'll be asked for some details (e.g. admin credentials).
 docker run -it --rm \
 	--name=seafile-setup \
 	-v /var/seafile:/seafile \
-	xama/docker-seafile-pro setup
+	whhxp/docker-seafile-pro setup
 ```
 
 PLEASE NOTE THE "setup" FOLLOWING THE IMAGE NAME!
@@ -35,7 +35,7 @@ docker run -d \
 	-p 8082:8082 \
 	-p 8000:8000 \
 	-v /var/seafile:/seafile \
-	xama/docker-seafile-pro
+	whhxp/docker-seafile-pro
 ```
 
 ## Upgrade (EXPERIMENTAL)
@@ -49,7 +49,7 @@ First, remove the seafile image. (You'll have to stop your container first)
 ```
 docker stop seafile
 docker rm seafile
-docker rmi xama/docker-seafile-pro
+docker rmi whhxp/docker-seafile-pro
 ```
 
 Proceed to run the container the same way you ran the setup. (except you'll need to use "upgrade" instead of "setup")
@@ -58,7 +58,7 @@ Proceed to run the container the same way you ran the setup. (except you'll need
 docker run -it --rm \
 	--name=seafile-upgrade \
 	-v /var/seafile:/seafile \
-	xama/docker-seafile-pro upgrade
+	whhxp/docker-seafile-pro upgrade
 ```
 
 This procedure requires a few minutes to complete. Please be patient and grab a coffee.
@@ -71,9 +71,9 @@ Start the container as usual after restoring the backup (see "Run").
 
 I recommend using rather the image tags provided by docker hub, since changes to the container environment may always occur, which could break previous versions. 
 When using container tags you ensure the docker environment really works with your version of preference.
-For instance you'll want to use xama/docker-seafile-pro:5.1.11 instead of xama/docker-seafile-pro:latest if you want to stay at 5.1.11
+For instance you'll want to use whhxp/docker-seafile-pro:5.1.11 instead of whhxp/docker-seafile-pro:latest if you want to stay at 5.1.11
 
-Refer to [Releases](https://github.com/xama5/docker-seafile-pro/releases)  for available versions.
+Refer to [Releases](https://github.com/whhxp/docker-seafile-pro/releases)  for available versions.
 
 ## Install license file
 
